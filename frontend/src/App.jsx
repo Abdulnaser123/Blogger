@@ -8,6 +8,7 @@ import Home from "./Pages/Home.jsx";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import PostBlog from "./Pages/PostBlog";
+import About from "./Pages/About";
 
 // import PostBlog from "./pages/PostBlog";
 // import About from "./pages/About";
@@ -38,6 +39,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/register' element={<Register />} />
+        <Route path='/about' element={<About />} />
+
         <Route
           path='/login'
           element={<Login setAuthenticated={setAuthenticated} />}
