@@ -28,16 +28,18 @@ const Header = ({ isAuthenticated, setAuthenticated }) => {
           </Typography>
         </div>
         <div>
-          <Button component={Link} to='/post-blog' color='inherit'>
-            Post Blog
-          </Button>
           <Button component={Link} to='/about' color='inherit'>
             About
           </Button>
           {isAuthenticated ? (
-            <Button component={Link} to='/profile' color='inherit'>
-              Profile
-            </Button>
+            <>
+              <Button component={Link} to='/profile' color='inherit'>
+                Profile
+              </Button>
+              <Button component={Link} to='/post-blog' color='inherit'>
+                Post Blog
+              </Button>
+            </>
           ) : (
             <Button component={Link} to='/login' color='inherit'>
               Login
