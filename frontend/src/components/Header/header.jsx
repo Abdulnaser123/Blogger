@@ -15,7 +15,7 @@ const Header = ({ isAuthenticated, setAuthenticated }) => {
   };
 
   return (
-    <AppBar position='static'>
+    <AppBar position='static' sx={{ margin: 0 }}>
       <Toolbar style={{ display: "flex", justifyContent: "space-around" }}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <Typography
@@ -28,16 +28,18 @@ const Header = ({ isAuthenticated, setAuthenticated }) => {
           </Typography>
         </div>
         <div>
-          <Button component={Link} to='/post-blog' color='inherit'>
-            Post Blog
-          </Button>
           <Button component={Link} to='/about' color='inherit'>
             About
           </Button>
           {isAuthenticated ? (
-            <Button component={Link} to='/profile' color='inherit'>
-              Profile
-            </Button>
+            <>
+              <Button component={Link} to='/profile' color='inherit'>
+                Profile
+              </Button>
+              <Button component={Link} to='/post-blog' color='inherit'>
+                Post Blog
+              </Button>
+            </>
           ) : (
             <Button component={Link} to='/login' color='inherit'>
               Login
