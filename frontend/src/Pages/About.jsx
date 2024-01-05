@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[3],
   },
   icon: {
-    fontSize: 70,
+    fontSize: 20,
     marginRight: theme.spacing(2),
     color: theme.palette.primary.main,
   },

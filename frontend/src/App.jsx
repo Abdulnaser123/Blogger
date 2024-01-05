@@ -9,6 +9,7 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import PostBlog from "./Pages/PostBlog";
 import About from "./Pages/About";
+import Post from "./Pages/Post";
 
 // import PostBlog from "./pages/PostBlog";
 // import About from "./pages/About";
@@ -40,6 +41,7 @@ const App = () => {
         <Route path='/' element={<Home />}></Route>
         <Route path='/register' element={<Register />} />
         <Route path='/about' element={<About />} />
+        <Route path='/posts/:postId' element={<Post />} />
 
         <Route
           path='/login'

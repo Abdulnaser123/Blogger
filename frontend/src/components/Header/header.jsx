@@ -15,7 +15,7 @@ const Header = ({ isAuthenticated, setAuthenticated }) => {
   };
 
   return (
-    <AppBar position='static'>
+    <AppBar position='static' sx={{ margin: 0 }}>
       <Toolbar style={{ display: "flex", justifyContent: "space-around" }}>
         <div style={{ display: "flex", alignItems: "center" }}>
           <Typography

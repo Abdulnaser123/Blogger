@@ -57,7 +57,7 @@ const BlogList = () => {
               {post.content.length > 100 ? (
                 <>
                   {`${post.content.substring(0, 100)}... `}
-                  <Link to={`/post/${post.id}`}>See more</Link>
+                  <Link to={`/posts/${post._id}`}>See more</Link>
                 </>
               ) : (
                 post.content
@@ -70,7 +70,15 @@ const BlogList = () => {
               color='textSecondary'
               sx={{ fontSize: 10, marginTop: 1, textAlign: "right" }}
             >
-              {`${post.createdAt}`}
+              {new Date(post.createdAt).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+                second: "numeric",
+                timeZoneName: "short",
+              })}
             </Typography>
           </CardContent>
         </Card>
